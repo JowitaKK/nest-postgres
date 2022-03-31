@@ -18,7 +18,7 @@ getProducts() {
 //localhost:3000/products/1
 @Get('/:id')
 getProduct(@Param('id') id: string) {
-    return this.productsService.getById
+    return this.productsService.getById(parseInt(id));
 }
 
 // localhost:3000/products POST

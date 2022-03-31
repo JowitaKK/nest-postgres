@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { ProductsModule } from './products/products.module';
       //everything whats contains .entity, thats the elements of db (remember entieties.js)
       entities: ['**/*.entity.js']
     }),
-    // UsersModule
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
