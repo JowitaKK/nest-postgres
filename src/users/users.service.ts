@@ -26,9 +26,8 @@ export class UsersService {
         this.repo.remove(user)
     }
     
-    async edit( id: number, password: string, email: string ) {
+    async edit( id: number, password: string ) {
         const user = await this.repo.findOneBy({id});
-        user.email = email;
         user.password = password;
         return this.repo.save(user);
     }

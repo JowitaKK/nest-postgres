@@ -33,25 +33,10 @@ removeUser(@Param('id') id: string) {
     this.usersService.remove(+id)
 }
 
-}
-
 //localhost:3000/products/1 PATCH (editing parts of entieties other way use PUT)
 @Patch('/:id')
 editUser(@Body() body: EditUsertDto, @Param('id') id: string) {
-    return this.usersService.edit(+identity, body.password)
-    }
+    return this.usersService.edit(+id, body.password)
+}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-}

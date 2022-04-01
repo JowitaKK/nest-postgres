@@ -7,7 +7,9 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
+    UsersModule,
     ProductsModule,
+  
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -19,7 +21,7 @@ import { UsersModule } from './users/users.module';
       //everything whats contains .entity, thats the elements of db (remember entieties.js)
       entities: ['**/*.entity.js']
     }),
-    UsersModule,
+
   ],
   controllers: [AppController],
   providers: [AppService],
